@@ -1,0 +1,14 @@
+{
+  "name": "clippy",
+  "version": "1.0.0",
+  "description": "Cross-device clipboard sync",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "ws": "^8.18.0"
+  }
+}
