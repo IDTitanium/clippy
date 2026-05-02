@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "clippy",
+      "runtimeExecutable": "C:/Users/USER/.config/herd/bin/php83/php.exe",
+      "runtimeArgs": [
+        "-S",
+        "127.0.0.1:3456",
+        "-t",
+        "public",
+        "public/router.php"
+      ],
+      "port": 3456
+    }
+  ]
+}
