@@ -18,7 +18,7 @@ els.statusText = els.status.querySelector('.status-text');
 
 const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content || '';
 
-const POLL_INTERVAL_MS = 5000;
+const POLL_INTERVAL_MS = 1000;
 
 const state = {
   room: null,
