@@ -3,6 +3,7 @@ const $ = (id) => document.getElementById(id);
 const els = {
   roomCode: $('roomCode'),
   roomBtn: $('roomBtn'),
+  newRoomBtn: $('newRoomBtn'),
   status: $('status'),
   statusText: null,
   composer: $('composer'),
@@ -353,6 +354,25 @@ function bindEvents() {
       toast('Room link copied — open it on your other device');
     } catch {
       toast(url);
+    }
+  });
+
+  els.newRoomBtn.addEventListener('click', async () => {
+    try {
+      setStatus('connecting');
+      const data = await apiCreateRoom();
+      const newCode = data.code;
+      state.room = newCode;
+      saveRoom(newCode);
+      els.roomCode.textContent = newCode;
+      location.hash = newCode;
+      state.items = [];
+      render();
+      await pollOnce();
+      toast('New room created');
+    } catch {
+      setStatus('disconnected');
+      toast('Failed to create new room');
     }
   });
 

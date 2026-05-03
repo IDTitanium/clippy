@@ -24,6 +24,12 @@
               <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 9h10v10H9zM5 15V5h10"/>
             </svg>
           </button>
+          <button class="icon-btn" id="newRoomBtn" type="button" title="Create a new room">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
+            </svg>
+            <span>New room</span>
+          </button>
           <span class="status" id="status" data-state="connecting" aria-live="polite">
             <span class="dot"></span><span class="status-text">connecting</span>
           </span>
